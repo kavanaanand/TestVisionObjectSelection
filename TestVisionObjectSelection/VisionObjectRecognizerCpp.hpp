@@ -41,13 +41,15 @@ public:
 
 class VisionObjectRecognizerCppImpl;
 
-class VisionObjectRecognizerCpp {
+class VisionObjectRecognizerCpp: public std::enable_shared_from_this<VisionObjectRecognizerCpp> {
     
 public:
     VisionObjectRecognizerCpp(const uint8_t* buffer, size_t width, size_t height, size_t bytesPerRow);
     ~VisionObjectRecognizerCpp();
     
     void recognizeObjects();
+    void finished(size_t count) const;
+    void failed(std::string error) const;
     
 private:
     VisionObjectRecognizerCppImpl *pimpl;

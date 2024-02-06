@@ -49,7 +49,7 @@ public class ObjectRecognizer {
     }
     
     /// Creates and executes vision request for Object recognition
-    public func recognizeObjects(resultsCallback: VisionRequestCallbacks) {
+    public func recognizeObjects(callbackObject: VisionObjectRecognizerCpp) {
         observation = nil
 
         if #available(iOS 17, *) {
@@ -60,13 +60,13 @@ public class ObjectRecognizer {
                 guard result != nil else {
                     let reason = "No objects found"
                     print("error - ", reason)
-//                    resultsCallback._on_fail(reason)
+                    callbackObject.failed(std.string(reason))
                     onFail?(reason)
                     return
                 }
                 let resultCount = result!.allInstances.count
                 print("found object - ", resultCount)
-//                resultsCallback._on_finish(UInt(resultCount))
+                callbackObject.finished(resultCount)
                 onFinish?(resultCount)
             }
             
@@ -77,7 +77,7 @@ public class ObjectRecognizer {
                 } catch {
                     let reason = "failed to run the segmentation"
                     print("error - ", reason)
-//                    resultsCallback._on_fail(reason)
+                    callbackObject.failed(std.string(reason))
                     onFail?(reason)
                 }
             }
