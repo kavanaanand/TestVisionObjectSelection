@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import VisionObjectRecognizer
 
 class ViewController: UIViewController {
     private let imageView = UIImageView()

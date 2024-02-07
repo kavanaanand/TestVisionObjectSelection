@@ -80,7 +80,7 @@ public class ObjectRecognizer {
                     callbackObject.failed(std.string(reason))
                     onFail?(reason)
                 }
-            }
+             }
         }
     }
     

@@ -7,17 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E02633A2B73E45900BD4562 /* VisionObjectRecognizerCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E50EA3A2B716A9300634123 /* VisionObjectRecognizerCpp.cpp */; };
+		8E02633B2B73E45C00BD4562 /* VisionObjectRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50EA372B716A7300634123 /* VisionObjectRecognizer.swift */; };
+		8E0263482B73EB6800BD4562 /* libVisionObjectRecognizer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E0263332B73E42400BD4562 /* libVisionObjectRecognizer.a */; };
 		8E50EA242B716A4D00634123 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50EA232B716A4D00634123 /* AppDelegate.swift */; };
 		8E50EA262B716A4D00634123 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50EA252B716A4D00634123 /* SceneDelegate.swift */; };
 		8E50EA282B716A4D00634123 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50EA272B716A4D00634123 /* ViewController.swift */; };
 		8E50EA2B2B716A4D00634123 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E50EA292B716A4D00634123 /* Main.storyboard */; };
 		8E50EA2D2B716A4E00634123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E50EA2C2B716A4E00634123 /* Assets.xcassets */; };
 		8E50EA302B716A4E00634123 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E50EA2E2B716A4E00634123 /* LaunchScreen.storyboard */; };
-		8E50EA382B716A7300634123 /* VisionObjectRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E50EA372B716A7300634123 /* VisionObjectRecognizer.swift */; };
-		8E50EA3C2B716A9300634123 /* VisionObjectRecognizerCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E50EA3A2B716A9300634123 /* VisionObjectRecognizerCpp.cpp */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8E0263462B73EB6000BD4562 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E50EA182B716A4D00634123 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E0263322B73E42400BD4562;
+			remoteInfo = VisionObjectRecognizer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8E0263312B73E42400BD4562 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8E0263332B73E42400BD4562 /* libVisionObjectRecognizer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVisionObjectRecognizer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E0263412B73E64100BD4562 /* VisionObjectRecognizer-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VisionObjectRecognizer-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E50EA202B716A4D00634123 /* TestVisionObjectSelection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestVisionObjectSelection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E50EA232B716A4D00634123 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E50EA252B716A4D00634123 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,27 +52,54 @@
 		8E50EA2F2B716A4E00634123 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E50EA312B716A4E00634123 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E50EA372B716A7300634123 /* VisionObjectRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionObjectRecognizer.swift; sourceTree = "<group>"; };
-		8E50EA392B716A9300634123 /* TestVisionObjectSelection-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestVisionObjectSelection-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E50EA3A2B716A9300634123 /* VisionObjectRecognizerCpp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VisionObjectRecognizerCpp.cpp; sourceTree = "<group>"; };
 		8E50EA3B2B716A9300634123 /* VisionObjectRecognizerCpp.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VisionObjectRecognizerCpp.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8E50EA1D2B716A4D00634123 /* Frameworks */ = {
+		8E0263302B73E42400BD4562 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8E50EA1D2B716A4D00634123 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E0263482B73EB6800BD4562 /* libVisionObjectRecognizer.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E0263342B73E42400BD4562 /* VisionObjectRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				8E0263412B73E64100BD4562 /* VisionObjectRecognizer-Bridging-Header.h */,
+				8E50EA372B716A7300634123 /* VisionObjectRecognizer.swift */,
+				8E50EA3A2B716A9300634123 /* VisionObjectRecognizerCpp.cpp */,
+				8E50EA3B2B716A9300634123 /* VisionObjectRecognizerCpp.hpp */,
+			);
+			path = VisionObjectRecognizer;
+			sourceTree = "<group>";
+		};
+		8E0263442B73EA4A00BD4562 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8E50EA172B716A4D00634123 = {
 			isa = PBXGroup;
 			children = (
 				8E50EA222B716A4D00634123 /* TestVisionObjectSelection */,
+				8E0263342B73E42400BD4562 /* VisionObjectRecognizer */,
 				8E50EA212B716A4D00634123 /* Products */,
+				8E0263442B73EA4A00BD4562 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				8E50EA202B716A4D00634123 /* TestVisionObjectSelection.app */,
+				8E0263332B73E42400BD4562 /* libVisionObjectRecognizer.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,14 +118,10 @@
 				8E50EA232B716A4D00634123 /* AppDelegate.swift */,
 				8E50EA252B716A4D00634123 /* SceneDelegate.swift */,
 				8E50EA272B716A4D00634123 /* ViewController.swift */,
-				8E50EA372B716A7300634123 /* VisionObjectRecognizer.swift */,
-				8E50EA3A2B716A9300634123 /* VisionObjectRecognizerCpp.cpp */,
-				8E50EA3B2B716A9300634123 /* VisionObjectRecognizerCpp.hpp */,
 				8E50EA292B716A4D00634123 /* Main.storyboard */,
 				8E50EA2C2B716A4E00634123 /* Assets.xcassets */,
 				8E50EA2E2B716A4E00634123 /* LaunchScreen.storyboard */,
 				8E50EA312B716A4E00634123 /* Info.plist */,
-				8E50EA392B716A9300634123 /* TestVisionObjectSelection-Bridging-Header.h */,
 			);
 			path = TestVisionObjectSelection;
 			sourceTree = "<group>";
@@ -80,6 +129,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8E0263322B73E42400BD4562 /* VisionObjectRecognizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E0263392B73E42400BD4562 /* Build configuration list for PBXNativeTarget "VisionObjectRecognizer" */;
+			buildPhases = (
+				8E02632F2B73E42400BD4562 /* Sources */,
+				8E0263302B73E42400BD4562 /* Frameworks */,
+				8E0263312B73E42400BD4562 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VisionObjectRecognizer;
+			productName = VisionObjectRecognizer;
+			productReference = 8E0263332B73E42400BD4562 /* libVisionObjectRecognizer.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		8E50EA1F2B716A4D00634123 /* TestVisionObjectSelection */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E50EA342B716A4E00634123 /* Build configuration list for PBXNativeTarget "TestVisionObjectSelection" */;
@@ -91,6 +157,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8E0263472B73EB6000BD4562 /* PBXTargetDependency */,
 			);
 			name = TestVisionObjectSelection;
 			productName = TestVisionObjectSelection;
@@ -107,6 +174,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					8E0263322B73E42400BD4562 = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
 					8E50EA1F2B716A4D00634123 = {
 						CreatedOnToolsVersion = 15.0.1;
 						LastSwiftMigration = 1500;
@@ -127,6 +197,7 @@
 			projectRoot = "";
 			targets = (
 				8E50EA1F2B716A4D00634123 /* TestVisionObjectSelection */,
+				8E0263322B73E42400BD4562 /* VisionObjectRecognizer */,
 			);
 		};
 /* End PBXProject section */
@@ -145,19 +216,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8E02632F2B73E42400BD4562 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E02633B2B73E45C00BD4562 /* VisionObjectRecognizer.swift in Sources */,
+				8E02633A2B73E45900BD4562 /* VisionObjectRecognizerCpp.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8E50EA1C2B716A4D00634123 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E50EA3C2B716A9300634123 /* VisionObjectRecognizerCpp.cpp in Sources */,
 				8E50EA282B716A4D00634123 /* ViewController.swift in Sources */,
 				8E50EA242B716A4D00634123 /* AppDelegate.swift in Sources */,
-				8E50EA382B716A7300634123 /* VisionObjectRecognizer.swift in Sources */,
 				8E50EA262B716A4D00634123 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E0263472B73EB6000BD4562 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E0263322B73E42400BD4562 /* VisionObjectRecognizer */;
+			targetProxy = 8E0263462B73EB6000BD4562 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8E50EA292B716A4D00634123 /* Main.storyboard */ = {
@@ -179,6 +265,36 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8E0263372B73E42400BD4562 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4EZ4J3476;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "VisionObjectRecognizer/VisionObjectRecognizer-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E0263382B73E42400BD4562 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M4EZ4J3476;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "VisionObjectRecognizer/VisionObjectRecognizer-Bridging-Header.h";
+				SWIFT_OBJC_INTEROP_MODE = objcxx;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8E50EA322B716A4E00634123 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -309,6 +425,7 @@
 				DEVELOPMENT_TEAM = M4EZ4J3476;
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TestVisionObjectSelection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -323,7 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kavana.TestVisionObjectSelection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "TestVisionObjectSelection/TestVisionObjectSelection-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -341,6 +458,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = M4EZ4J3476;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = TestVisionObjectSelection/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -355,7 +473,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = kavana.TestVisionObjectSelection;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "TestVisionObjectSelection/TestVisionObjectSelection-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTEROP_MODE = objcxx;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -365,6 +483,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8E0263392B73E42400BD4562 /* Build configuration list for PBXNativeTarget "VisionObjectRecognizer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E0263372B73E42400BD4562 /* Debug */,
+				8E0263382B73E42400BD4562 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8E50EA1B2B716A4D00634123 /* Build configuration list for PBXProject "TestVisionObjectSelection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -10,13 +10,13 @@
 #include <iostream>
 #include <vector>
 
-#include <TestVisionObjectSelection-Swift.h>
+#include <VisionObjectRecognizer-Swift.h>
 
 
 class VisionObjectRecognizerCppImpl {
     
 public:
-    VisionObjectRecognizerCppImpl(const uint8_t* buffer, size_t width, size_t height, size_t bytesPerRow) : _swiftRecognizer(TestVisionObjectSelection::ObjectRecognizer::init(VisionRequestImage(std::move(buffer), width, height, bytesPerRow))) {
+    VisionObjectRecognizerCppImpl(const uint8_t* buffer, size_t width, size_t height, size_t bytesPerRow) : _swiftRecognizer(VisionObjectRecognizer::ObjectRecognizer::init(VisionRequestImage(std::move(buffer), width, height, bytesPerRow))) {
     }
     
     void finished(size_t count) {
@@ -31,7 +31,7 @@ public:
 //        _swiftRecognizer.recognizeObjects(this);
 //    }
 
-    TestVisionObjectSelection::ObjectRecognizer _swiftRecognizer;
+    VisionObjectRecognizer::ObjectRecognizer _swiftRecognizer;
 };
 
 VisionObjectRecognizerCpp::VisionObjectRecognizerCpp(const uint8_t* buffer, size_t width, size_t height, size_t bytesPerRow) {
