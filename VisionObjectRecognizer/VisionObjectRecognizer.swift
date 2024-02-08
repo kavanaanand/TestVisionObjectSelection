@@ -8,12 +8,7 @@
 import Vision
 import UIKit
 
-// NSNumber
-
-public class ObjectRecognizer {
-    
-    public var onFinish: ((Int) -> Void)? = nil
-    public var onFail: ((String) -> Void)? = nil
+public class VisionObjectRecognizerInternal {
     
     private(set) internal var image: CGImage
     
@@ -36,15 +31,6 @@ public class ObjectRecognizer {
                         shouldInterpolate: false,
                         intent: .relativeColorimetric)!
         
-        print("-------")
-        print ("w - ", image.width)
-        print ("h - ", image.height)
-        print ("bpr - ", image.bytesPerRow)
-        print ("bpp - ", image.bitsPerPixel)
-        print ("bpc - ", image.bitsPerComponent)
-        print ("cs - ", image.colorSpace ?? "")
-        print ("bmi - ", image.bitmapInfo)
-        
         requestHandler = VNImageRequestHandler(cgImage: image)
     }
     
@@ -61,13 +47,11 @@ public class ObjectRecognizer {
                     let reason = "No objects found"
                     print("error - ", reason)
                     callbackObject.failed(std.string(reason))
-                    onFail?(reason)
                     return
                 }
                 let resultCount = result!.allInstances.count
                 print("found object - ", resultCount)
                 callbackObject.finished(resultCount)
-                onFinish?(resultCount)
             }
             
             // Execute Vision request
@@ -78,7 +62,6 @@ public class ObjectRecognizer {
                     let reason = "failed to run the segmentation"
                     print("error - ", reason)
                     callbackObject.failed(std.string(reason))
-                    onFail?(reason)
                 }
              }
         }
@@ -152,7 +135,7 @@ public class ObjectRecognizer {
 }
 
 /*
-private extension ObjectRecognizer {
+private extension VisionObjectRecognizerInternal {
     
     // The following method assumes observation and intances are valid
     func generateMaskedImage(_ instances: IndexSet) throws -> CGImage? {

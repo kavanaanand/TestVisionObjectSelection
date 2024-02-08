@@ -8,8 +8,6 @@
 #ifndef VisionObjectRecognizerCpp_hpp
 #define VisionObjectRecognizerCpp_hpp
 
-#include <stdio.h>
-#include <memory>
 #include <vector>
 #include <functional>
 
@@ -28,26 +26,18 @@ public:
     size_t _height{0};
 };
 
-class VisionRequestCallbacks {
-
-public:
-    VisionRequestCallbacks(std::function<void(size_t)> on_finish,
-                           std::function<void(std::string)> on_fail)
-    : _on_finish(on_finish), _on_fail(on_fail) {}
-    
-    std::function<void(size_t)> _on_finish;
-    std::function<void(std::string)> _on_fail;
-};
-
 class VisionObjectRecognizerCppImpl;
 
-class VisionObjectRecognizerCpp: public std::enable_shared_from_this<VisionObjectRecognizerCpp> {
+class VisionObjectRecognizerCpp {
     
 public:
     VisionObjectRecognizerCpp(const uint8_t* buffer, size_t width, size_t height, size_t bytesPerRow);
     ~VisionObjectRecognizerCpp();
     
     void recognizeObjects();
+    void set_on_finish_callback(std::function<void(size_t)> callback);
+    void set_on_fail_callback(std::function<void(std::string)> callback);
+    
     void finished(size_t count) const;
     void failed(std::string error) const;
     
